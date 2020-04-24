@@ -33,11 +33,23 @@ Fluid texts:
 ## HTML media attributes with multiple css files
 
 ```html
-    <link rel="stylesheet" href="style.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="print.css" media="print" />
-    <link rel="stylesheet" href="responsive.css" media="screen and (max-width: 768px)" />
+  <link rel="stylesheet" href="print.css" media="print" />
+  <link rel="stylesheet" href="responsive.css" media="screen and (max-width: 768px)" />
 ```
 
 ## Images
+
+Responsive images built using picture and img as a fallback image source
+
+```html
+  <picture class="image" alt="image">
+    <source media="(min-width: 768px" srcset="https://i.ytimg.com/vi/GykTLqODQuU/maxresdefault.jpg">
+    <source media="(min-width: 320px" srcset="https://i.ytimg.com/vi/GykTLqODQuU/hqdefault.jpg">
+    <source media="(min-width: 10px" srcset="https://i.ytimg.com/vi/GykTLqODQuU/mqdefault.jpg">
+    
+    <img src="https://i.ytimg.com/vi/GykTLqODQuU/hqdefault.jpg" />
+  </picture>
+```
