@@ -1,0 +1,94 @@
+html {
+  font-size: 50%;
+}
+
+/* hero behavior with direction changed and image display order changed */
+@media (max-width: 630px) {
+  .hero .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero .container img {
+    order: -1;
+  }
+
+  /* form display changed */
+  .form-group {
+    display: block;
+  }
+}
+
+@media (max-width: 540px) {
+  nav {
+    display: none;
+  }
+
+  .one, .two, .three {
+    background-color: #fff;
+    height: 5px;
+    margin: 6px auto;
+    transition-duration: 0.3s;
+    width: 100%;
+  }
+
+  .menu-toggle {
+    height: 30px;
+    margin-right: 20px;
+    width: 40px;
+  }
+
+  /* fullscreen */
+  .menu-section.on {
+    align-items: center;
+    background: #7159c1;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    z-index: 10;
+  }
+
+  .menu-section.on nav {
+    display: block;
+  }
+
+  .menu-section.on .menu-toggle {
+    position: absolute;
+    right: 25px;
+    top: 15px;
+  }
+
+  .menu-section.on .menu-toggle .one {
+    transform: rotate(45deg) translate(7px, 7px);
+  }
+
+  .menu-section.on .menu-toggle .two {
+    opacity: 0;
+  }
+
+  .menu-section.on .menu-toggle .three {
+    transform: rotate(-45deg) translate(8px, -10px);
+  }
+
+  .menu-section.on nav ul {
+    display: block;
+    text-align: center;
+  }
+
+  .menu-section.on nav ul a {
+    display: block;
+    transition-duration: 0.5s;
+    font-size: 3rem;
+    line-height: 4rem;
+  }
+}
+
+@media (max-width: 320px) {
+  #form h3 {
+    font-size: 2rem;
+  }
+}
