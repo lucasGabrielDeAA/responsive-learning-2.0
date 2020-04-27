@@ -42,13 +42,13 @@ Fluid texts:
 
 ## Images
 
-Responsive images built using picture and img as a fallback image source
+Responsive images built using picture and img as a fallback image source. Each image will be used for a specific resolution.
 
 ```html
   <picture class="image" alt="image">
-    <source media="(min-width: 768px" srcset="https://i.ytimg.com/vi/GykTLqODQuU/maxresdefault.jpg">
-    <source media="(min-width: 320px" srcset="https://i.ytimg.com/vi/GykTLqODQuU/hqdefault.jpg">
-    <source media="(min-width: 10px" srcset="https://i.ytimg.com/vi/GykTLqODQuU/mqdefault.jpg">
+    <source media="(min-width: 768px)" srcset="https://i.ytimg.com/vi/GykTLqODQuU/maxresdefault.jpg">
+    <source media="(min-width: 320px)" srcset="https://i.ytimg.com/vi/GykTLqODQuU/hqdefault.jpg">
+    <source media="(min-width: 10px)" srcset="https://i.ytimg.com/vi/GykTLqODQuU/mqdefault.jpg">
     
     <img src="https://i.ytimg.com/vi/GykTLqODQuU/hqdefault.jpg" />
   </picture>
